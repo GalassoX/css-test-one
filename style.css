@@ -1,0 +1,362 @@
+@import url('./assets/inter-font.ttf');
+
+* {
+  margin: 0;
+  padding: 0;
+
+  --bg-color: #cb654f;
+  --font-color: #0b1528;
+  --ball-color: #9f4f3d;
+}
+
+@media (prefers-color-scheme: dark) {
+  * {
+    --bg-color: #0b1528;
+    --font-color: #cb654f;
+    --ball-color: #1e396c;
+  }
+}
+
+html {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  min-height: 100dvh;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.link-icon {
+  width: 1.5em;
+  color: var(--font-color);
+}
+
+.back-alt {
+  width: 100%;
+  background-color: var(--font-color);
+  color: var(--bg-color);
+}
+
+.topbot-main {
+  margin: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.header-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--bg-color);
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(15deg);
+  }
+
+  75% {
+    transform: rotate(-15deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.header-btn:hover>svg {
+  animation: shake .2s linear;
+  animation-fill-mode: both;
+}
+
+.footer-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  cursor: pointer;
+  padding: .4em .5em;
+  border-radius: 8px;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  border: 1px solid var(--font-color);
+  transition: all .2s;
+}
+
+button:hover {
+  background-color: var(--font-color);
+  color: var(--bg-color);
+  border: 1px solid var(--bg-color);
+}
+
+.button-space {
+  margin-top: .5em;
+}
+
+.floating {
+  color: var(--ball-color);
+  font-size: 2em;
+  position: absolute;
+  z-index: -1;
+}
+
+.fp1 {
+  top: 15%;
+  left: 10%;
+  animation: bouncing 5s ease-in-out infinite;
+  animation-delay: 0;
+}
+
+.fp2 {
+  top: 15%;
+  left: 20%;
+  animation: bouncing 5s ease-in-out infinite;
+  animation-delay: .1s;
+}
+
+.fp3 {
+  top: 15%;
+  left: 30%;
+  animation: bouncing 5s ease-in-out infinite;
+  animation-delay: .2s;
+}
+
+.fp4 {
+  top: 15%;
+  left: 40%;
+  animation: bouncing 5s ease-in-out infinite;
+  animation-delay: .3s;
+}
+
+.fp5 {
+  top: 15%;
+  left: 50%;
+  animation: bouncing 5s ease-in-out infinite;
+  animation-delay: .4s;
+}
+
+.fp6 {
+  top: 15%;
+  left: 60%;
+  animation: bouncing 5s ease-in-out infinite;
+  animation-delay: .5s;
+}
+
+.fp7 {
+  top: 15%;
+  left: 70%;
+  animation: bouncing 5s ease-in-out infinite;
+  animation-delay: .6s;
+}
+
+.fp8 {
+  top: 15%;
+  left: 80%;
+  animation: bouncing 5s ease-in-out infinite;
+  animation-delay: .7s;
+}
+
+.fp9 {
+  top: 15%;
+  left: 90%;
+  animation: bouncing 5s ease-in-out infinite;
+  animation-delay: .8s;
+}
+
+@keyframes bouncing {
+  0% {
+    top: 15%;
+  }
+
+  50% {
+    top: 80%;
+  }
+
+  0% {
+    top: 15%
+  }
+}
+
+.ball {
+  background-color: var(--ball-color);
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+}
+
+.ball1 {
+  animation: ball1 5s ease-in-out infinite;
+}
+
+.ball2 {
+  animation: ball2 5s ease-in-out infinite;
+}
+
+.ball3 {
+  animation: ball3 5s ease-in-out infinite;
+}
+
+.ball4 {
+  animation: ball4 5s ease-in-out infinite;
+}
+
+@keyframes ball1 {
+  0% {
+    top: 10%;
+    left: 10%;
+  }
+
+  25% {
+    top: 10%;
+    left: 79%;
+  }
+
+  50% {
+    top: 79%;
+    left: 79%;
+  }
+
+  75% {
+    top: 79%;
+    left: 10%;
+  }
+
+  100% {
+    top: 10%;
+    left: 10%;
+  }
+}
+
+@keyframes ball2 {
+  0% {
+    top: 10%;
+    left: 79%;
+  }
+
+  25% {
+    top: 79%;
+    left: 79%;
+  }
+
+  50% {
+    top: 79%;
+    left: 10%;
+  }
+
+  75% {
+    top: 10%;
+    left: 10%;
+  }
+
+  100% {
+    top: 10%;
+    left: 79%;
+  }
+}
+
+@keyframes ball3 {
+  0% {
+    top: 79%;
+    left: 79%;
+  }
+
+  25% {
+    top: 79%;
+    left: 10%;
+  }
+
+  50% {
+    top: 10%;
+    left: 10%;
+  }
+
+  75% {
+    top: 10%;
+    left: 79%;
+  }
+
+  100% {
+    top: 79%;
+    left: 79%;
+  }
+}
+
+@keyframes ball4 {
+
+  0% {
+    top: 79%;
+    left: 10%;
+  }
+
+  25% {
+    top: 10%;
+    left: 10%;
+  }
+
+  50% {
+    top: 10%;
+    left: 79%;
+  }
+
+  75% {
+    top: 79%;
+    left: 79%;
+  }
+
+  100% {
+    top: 79%;
+    left: 10%;
+  }
+}
+
+/* -- HELPERS -- */
+
+.text-center {
+  text-align: center;
+}
+
+.text-sm {
+  font-size: .85em;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.m-top {
+  margin-top: 1em;
+}
